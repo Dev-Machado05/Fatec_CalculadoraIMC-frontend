@@ -1,4 +1,4 @@
-# 📱 Calculadora de IMC
+# 📱 Calculadora de IMC - Frontend
 
 > **Aplicativo mobile para cálculo e acompanhamento do Índice de Massa Corporal (IMC)**
 
@@ -7,21 +7,81 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Capacitor](https://img.shields.io/badge/Capacitor-119EFF?style=for-the-badge&logo=capacitor&logoColor=white)
 
-## 📋 Sobre o Projeto
+Frontend da atividade proposta na matéria de PDM (Programação para Dispositivos Móveis), desenvolvido como projeto acadêmico da FATEC, focado em fornecer uma ferramenta simples e eficaz para calcular e acompanhar o Índice de Massa Corporal.
 
-A **Calculadora de IMC** é um aplicativo mobile desenvolvido como projeto acadêmico da FATEC, focado em fornecer uma ferramenta simples e eficaz para calcular e acompanhar o Índice de Massa Corporal de usuários de diferentes faixas etárias.
+## 🚀 Como utilizar
 
-### ✨ Funcionalidades Principais
+### Pré-requisitos
+- Node.js 16+ instalado
+- Ionic CLI
+- Capacitor CLI
 
-- 🧮 **Cálculo de IMC para Adultos** - Sistema interno otimizado
-- 👶 **Cálculo de IMC Infantil** - Integração com calculadora oficial CDC
-- 📊 **Histórico Completo** - Acompanhamento de cálculos anteriores
-- 🔄 **Sincronização Automática** - Dados sempre atualizados
-- 🌙 **Tema Adaptativo** - Suporte a modo claro/escuro
-- 📱 **Design Responsivo** - Interface otimizada para todos os dispositivos
-- ❓ **Manual de Ajuda** - Guia completo de utilização
+```bash
+# Node.js (versão 16 ou superior)
+node --version
 
-## 🚀 Tecnologias Utilizadas
+# Ionic CLI
+npm install -g @ionic/cli
+
+# Capacitor CLI
+npm install -g @capacitor/cli
+```
+
+### 1. Instalação
+```bash
+# Clone o repositório
+git clone https://github.com/Dev-Machado05/Fatec_CalculadoraIMC-frontend.git
+
+# Navegue para o diretório
+cd Fatec_CalculadoraIMC-frontend
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
+ionic serve
+```
+
+### 2. Build para Android
+```bash
+# Build da aplicação web
+ionic build --prod
+
+# Adicionar plataforma Android (primeira vez)
+ionic capacitor add android
+
+# Sincronizar arquivos
+ionic capacitor sync android
+
+# Gerar APK
+cd android
+./gradlew assembleDebug
+```
+
+O aplicativo estará rodando em: `http://localhost:8100`
+
+## ✨ Funcionalidades
+
+### 🧮 Cálculo de IMC
+- **Para Adultos (20+ anos)** - Sistema interno otimizado
+- **Para Crianças (2-19 anos)** - Integração com calculadora oficial CDC
+
+### 📊 Sistema de Histórico
+- **Auto-refresh** a cada 5 minutos
+- **Cache inteligente** para performance
+- **Sincronização automática** ao retornar ao app
+- **Refresh manual** com botão dedicado
+- **Detalhes completos** de cada cálculo
+
+### 🎨 Interface e UX
+- **Tema Adaptativo** - Suporte a modo claro/escuro
+- **Design Responsivo** - Interface otimizada para todos os dispositivos
+- **Manual de Ajuda** - Guia completo de utilização
+- **Cards modernos** com animações suaves
+- **Gradientes coloridos** para identificação visual
+- **Ícones intuitivos** do Ionicons
+
+## 🛠️ Tecnologias
 
 ### Frontend
 - **Ionic 7** - Framework híbrido para desenvolvimento mobile
@@ -40,90 +100,7 @@ A **Calculadora de IMC** é um aplicativo mobile desenvolvido como projeto acad�
 - **ESLint** - Análise estática de código
 - **Git** - Controle de versão
 
-## 📱 Funcionalidades Detalhadas
-
-### 🧮 Cálculo de IMC
-
-#### Para Adultos (20+ anos)
-- Entrada de dados: sexo, idade, altura e peso
-- Cálculo automático do IMC
-- Classificação segundo padrões da OMS
-- Sugestão de peso ideal
-- Salvamento automático no histórico
-
-#### Para Crianças e Adolescentes (2-19 anos)
-- Integração com calculadora oficial do CDC
-- Percentis adequados para a idade
-- Interface em iframe seguro
-
-### 📊 Sistema de Histórico
-
-- **Auto-refresh** a cada 5 minutos
-- **Cache inteligente** para performance
-- **Sincronização automática** ao retornar ao app
-- **Refresh manual** com botão dedicado
-- **Detalhes completos** de cada cálculo
-- **Navegação intuitiva** para resultados
-
-### 🎨 Interface e UX
-
-- **Cards modernos** com animações suaves
-- **Gradientes coloridos** para identificação visual
-- **Ícones intuitivos** do Ionicons
-- **Feedback visual** para todas as ações
-- **Estados de loading** com skeleton screens
-- **Tratamento de erros** com mensagens claras
-
-## 🛠️ Instalação e Desenvolvimento
-
-### Pré-requisitos
-
-```bash
-# Node.js (versão 16 ou superior)
-node --version
-
-# Ionic CLI
-npm install -g @ionic/cli
-
-# Capacitor CLI
-npm install -g @capacitor/cli
-```
-
-### Configuração do Projeto
-
-```bash
-# Clone o repositório
-git clone https://github.com/Dev-Machado05/Fatec_Estrutura-de-Dados.git
-
-# Navegue para o diretório
-cd Fatec_Estrutura-de-Dados/calc_IMC/frontend
-
-# Instale as dependências
-npm install
-
-# Execute o projeto
-ionic serve
-```
-
-### 📱 Build para Android
-
-```bash
-# Build da aplicação web
-ionic build --prod
-
-# Adicionar plataforma Android (primeira vez)
-ionic capacitor add android
-
-# Sincronizar arquivos
-ionic capacitor sync android
-
-# Gerar APK
-cd android
-./gradlew assembleDebug
-```
-
-## 📁 Estrutura do Projeto
-
+## 📁 Estrutura do projeto
 ```
 src/
 ├── components/
@@ -156,28 +133,6 @@ src/
 | Obesidade Grau 2 | 35,0 - 39,9 | 🔴 Vermelho |
 | Obesidade Grau 3 | ≥ 40,0 | 🔴 Vermelho |
 
-## 🔄 Sistema de Versionamento
-
-### Convenção Semântica
-- **MAJOR.MINOR.PATCH** (ex: 1.2.1)
-- **MAJOR**: Mudanças incompatíveis
-- **MINOR**: Novas funcionalidades
-- **PATCH**: Correções de bugs
-
-### Histórico de Versões
-
-#### v1.1.0 (Atual)
-- ✅ Interface modernizada com tema adaptativo
-- ✅ Sistema de auto-refresh no histórico
-- ✅ Manual de ajuda integrado
-- ✅ Melhorias de performance e UX
-
-#### v1.0.0
-- 🚀 Lançamento inicial
-- 📱 Cálculo de IMC básico
-- 💾 Sistema de histórico
-- 🌐 Integração com backend
-
 ## 🚀 Deploy e Distribuição
 
 ### Desenvolvimento
@@ -207,6 +162,57 @@ npx cypress run              # Testes end-to-end
 npx cypress open             # Interface gráfica
 ```
 
+## 🔄 Sistema de Versionamento
+
+### Convenção Semântica
+- **MAJOR.MINOR.PATCH** (ex: 1.2.1)
+- **MAJOR**: Mudanças incompatíveis
+- **MINOR**: Novas funcionalidades
+- **PATCH**: Correções de bugs
+
+### Histórico de Versões
+
+#### v1.0.2 (Atual)
+- ✅ Interface modernizada com tema adaptativo
+- ✅ Sistema de auto-refresh no histórico
+- ✅ Manual de ajuda integrado
+- ✅ Melhorias de performance e UX
+
+#### v1.0.0
+- 🚀 Lançamento inicial
+- 📱 Cálculo de IMC básico
+- 💾 Sistema de histórico
+- 🌐 Integração com backend
+
+## 🐛 Troubleshooting
+
+### Problemas comuns:
+
+1. **Erro de instalação de dependências**
+   ```bash
+   # Limpe o cache do npm
+   npm cache clean --force
+   
+   # Remova node_modules e reinstale
+   rm -rf node_modules
+   npm install
+   ```
+
+2. **Problemas com Capacitor**
+   ```bash
+   # Sincronize novamente
+   ionic capacitor sync
+   
+   # Recrie a plataforma
+   ionic capacitor add android --confirm
+   ```
+
+3. **Erro de build**
+   ```bash
+   # Build limpo
+   ionic build --prod --clean
+   ```
+
 ## 🤝 Contribuição
 
 1. Fork o projeto
@@ -223,17 +229,17 @@ npx cypress open             # Interface gráfica
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto é de uso acadêmico para a disciplina de PDM da FATEC.
 
 ## 👥 Equipe
 
 - **Desenvolvedor Principal**: [Dev-Machado05](https://github.com/Dev-Machado05)
 - **Instituição**: FATEC - Faculdade de Tecnologia
-- **Disciplina**: Estrutura de Dados
+- **Disciplina**: PDM - Programação para Dispositivos Móveis
 
 ## 📞 Contato
 
-- 📧 Email: [email@exemplo.com]
+- 📧 Email: [Lucas Machado](mailto:dev.lucasmachado205@gmail.com)
 - 🐙 GitHub: [@Dev-Machado05](https://github.com/Dev-Machado05)
 - 🎓 FATEC: [Site Institucional](https://fatec.sp.gov.br/)
 
@@ -242,7 +248,5 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 <div align="center">
 
 **⭐ Se este projeto foi útil para você, considere dar uma estrela!**
-
-Desenvolvido com ❤️ por estudantes da FATEC
 
 </div>
