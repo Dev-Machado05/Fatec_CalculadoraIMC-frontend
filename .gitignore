@@ -1,0 +1,88 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/dist
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+/.nx
+/.nx/cache
+.vscode/
+.vscode/*
+!/.vscode/extensions.json
+.idea
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional eslint cache
+.eslintcache
+
+# ===== SEGURANÇA E CONFIGURAÇÕES SENSÍVEIS =====
+
+# Arquivos de ambiente
+.env
+.env.*
+!.env.example
+
+# Configurações do Android
+/android/
+android/
+
+# Configurações do iOS  
+/ios/
+ios/
+
+# Builds e outputs
+/build/
+/dist/
+/www/
+
+# Capacitor
+.capacitor/
+# /capacitor.config.*  # Removido - arquivo seguro para commit
+# !capacitor.config.example.*
+
+# Keystores e certificados
+*.keystore
+*.jks
+*.p12
+*.key
+*.pem
+
+# Logs específicos do projeto
+*.log
+logs/
+
+# Configurações locais do IDE
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# Arquivos temporários
+*.tmp
+*.temp
+.cache/
+
+# Configurações do sistema
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+
+# Backup files
+*.backup
+*.bak

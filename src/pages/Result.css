@@ -1,0 +1,149 @@
+/* - temas de fundo - */
+.dark-background {
+  --background: linear-gradient(
+    135deg,
+    rgba(7, 61, 0, 0.01) 0%,
+    rgba(7, 61, 0, 0.2) 100%
+  );
+}
+
+.light-background {
+  --background: #9493c452;
+}
+
+/* - Container principal - */
+.result_main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.result_container {
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 15px;
+  position: relative;
+}
+
+.result_container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ion-color-primary), var(--ion-color-secondary));
+  border-radius: 15px 15px 0 0; /* Ajustado para combinar com o border-radius do container */
+}
+
+.result_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.result_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--ion-text-color);
+}
+
+.result_info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.result_item {
+  font-size: 1.1rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  gap: 15px;
+}
+
+@media (max-width: 480px) {
+  
+  .result_content {
+    width: fit-content;
+  }
+  
+  .result_info{ 
+    align-items: center;
+  }
+  .result_item {
+    width: 180px;
+  }
+}
+
+.result_item span {
+  font-weight: bold;
+}
+
+/* --- temas de estilo --- */
+
+/* Estilos para tema dark */
+.darkResult-container {
+  background-color: rgba(30,30,30,0.85);
+  min-width: 20vw;
+}
+
+.darkResult-container .result_item {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.darkResult-container .result_title {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Estilos para tema light */
+.lightResult-container {
+  background-color: rgb(255, 255, 255, 1);
+  box-shadow: 3px 3px 25px 5px rgba(0, 0, 0, 0.4);
+}
+
+.lightResult-container .result_item {
+  background-color: rgba(197, 197, 197, 0.315);
+  color: rgba(0, 0, 0, 1);
+}
+
+.lightResult-container .result_title {
+  color: rgba(0, 0, 0, 1);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .result_container {
+    min-width: 250px;
+    padding: 20px;
+  }
+  
+  .result_title {
+    font-size: 1.3rem;
+  }
+  
+  .result_item {
+    font-size: 1rem;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+}

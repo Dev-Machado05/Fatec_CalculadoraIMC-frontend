@@ -1,0 +1,342 @@
+/* Histórico de Cálculos - Tab2 Styles */
+
+.dark-background .history-container { 
+  --background: linear-gradient(
+    135deg,
+    rgba(7, 61, 0, 0.01) 0%,
+    rgba(7, 61, 0, 0.2) 100%
+  );
+}
+.light-background .history-container { 
+  --background: #9493c452;
+}
+
+.history-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header Card */
+.header-card {
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.history-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ion-color-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.history-title ion-icon {
+  font-size: 1.5rem;
+}
+
+.history-title ion-badge {
+  margin-left: auto;
+}
+
+/* Records Grid */
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.history-record-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.history-record-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.history-record-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--ion-color-primary),
+    var(--ion-color-secondary)
+  );
+}
+
+/* Record Title */
+.record-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.imc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.imc-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ion-color-primary);
+}
+
+.chevron-icon {
+  color: var(--ion-color-medium);
+  font-size: 1.2rem;
+}
+
+/* Record Details */
+.record-details {
+  margin-top: 0.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--ion-color-primary); 
+}
+
+.detail-item ion-icon {
+  color: var(--ion-color-primary);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.detail-content {
+  flex: 1;
+}
+
+.detail-content h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ion-color-primary);
+  margin: 0 0 0.25rem 0;
+}
+
+.detail-content p {
+  font-size: 0.9rem;
+  color: var(--ion-color-dark);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+  font-size: 1.2rem;
+}
+
+.darkLogin-text {
+  color: white;
+}
+
+.lightLogin-text {
+  color: #2b2a3a;
+}
+
+/* Error State */
+.error-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--ion-color-danger);
+}
+
+.error-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ion-color-danger);
+}
+
+.error-message {
+  color: var(--ion-color-medium);
+  margin-bottom: 1rem;
+}
+
+.retry-button {
+  --border-color: var(--ion-color-danger);
+  --color: var(--ion-color-danger);
+}
+
+/* Empty State */
+.empty-state-card {
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.empty-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--ion-color-medium);
+}
+
+.empty-title ion-icon {
+  font-size: 2rem;
+}
+
+.calculate-button {
+  margin-top: 1rem;
+  --border-radius: 12px;
+}
+
+/* Theme Support */
+.dark-background .history-record-card,
+.dark-background .header-card,
+.dark-background .loading-card,
+.dark-background .error-card,
+.dark-background .empty-state-card {
+  background-color: var(--ion-color-step-100);
+  border: 1px solid var(--ion-color-step-100);
+}
+.dark-background .history-record-card {
+    background-color: #29282e;
+}
+
+.dark-background .detail-item {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-left: 3px solid var(--ion-color-primary-tint);
+}
+
+.dark-background .detail-item ion-icon {
+  color: var(--ion-color-primary-tint);
+}
+
+.dark-background .detail-content h3 {
+  color: var(--ion-color-primary-tint);
+}
+
+.dark-background .detail-content p {
+  font-weight: 500;
+}
+
+.light-background .history-record-card,
+.light-background .header-card,
+.light-background .loading-card,
+.light-background .error-card,
+.light-background .empty-state-card {
+  background-color: var(--ion-color-light);
+  border: 1px solid var(--ion-color-light-shade);
+}
+
+.light-background .detail-item {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-left: 3px solid var(--ion-color-primary-tint);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .history-container {
+    padding: 0.5rem;
+  }
+
+  .records-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .history-title {
+    font-size: 1.1rem;
+  }
+
+  .imc-value {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .record-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .chevron-icon {
+    align-self: flex-end;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.history-record-card {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.history-record-card:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+.history-record-card:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+/* Badge Colors */
+ion-badge[color="success"] {
+  --background: var(--ion-color-success);
+  --color: white;
+}
+
+ion-badge[color="warning"] {
+  --background: var(--ion-color-warning);
+  --color: white;
+}
+
+ion-badge[color="danger"] {
+  --background: var(--ion-color-danger);
+  --color: white;
+}
+
+/* Focus States for Accessibility */
+.history-record-card:focus-within {
+  outline: 2px solid var(--ion-color-primary);
+  outline-offset: 2px;
+}
+
+/* Hover Effects */
+.history-record-card:hover .chevron-icon {
+  color: var(--ion-color-primary);
+}

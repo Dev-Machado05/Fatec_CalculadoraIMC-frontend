@@ -1,0 +1,44 @@
+/* - temas de fundo - */
+.dark-background {
+  --background: linear-gradient(
+    135deg,
+    rgba(7, 61, 0, 0.01) 0%,
+    rgba(7, 61, 0, 0.2) 100%
+  );
+}
+
+.light-background {
+  --background: #9493c452;
+}
+
+/* - ageGroup - */
+.ageGroup_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.ageGroup_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.ageGroup_content ion-button {
+  min-width: 200px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.ageGroupButton_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
