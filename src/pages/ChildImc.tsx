@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./childImc.css";
+import "./ChildImc.css";
 import {
   IonPage,
   IonHeader,
